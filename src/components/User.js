@@ -3,10 +3,10 @@ import React from 'react';
 export default class User extends React.Component {
 
     state = {
-        user : null
+        user: null
     }
 
-    street; //fix bag
+    street; //fix err
 
     componentDidMount() {
         const id = this.props.match.params.id;
@@ -22,7 +22,6 @@ export default class User extends React.Component {
             <div>
                 {
                     user && (<div>
-
                         <p>{user.name} - {user.username}</p>
                         <p>{user.email}</p>
                         <p>{user.phone}</p>

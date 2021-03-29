@@ -7,9 +7,9 @@ export default class Post extends React.Component {
     }
 
     componentDidMount() {
-        const id = this.props.match.params.id;
+        const userId = this.props.match.params.userId;
 
-        fetch('https://jsonplaceholder.typicode.com/posts/' + id)
+        fetch('https://jsonplaceholder.typicode.com/posts/' + userId)
             .then(response => response.json())
             .then(post => this.setState({post}))
     }
